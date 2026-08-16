@@ -1,0 +1,15 @@
+bin/
+obj/
+.vs/
+*.lib
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.vcxproj.user
+
+.env
+.env.*
+*.secret
+*.secrets
+harness/.cache/

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{E67F2B77-394C-4C41-B0F0-7E89453A1241}</ProjectGuid>
+    <RootNamespace>airplayclib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\</IntDir>
+    <TargetName>airplayc</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;WIN32_LEAN_AND_MEAN;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)deps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="deps\alac\ag_dec.c">
+      <DisableSpecificWarnings>4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="deps\alac\ALACBitUtilities.c" />
+    <ClCompile Include="deps\alac\ALACDecoder.cpp" />
+    <ClCompile Include="deps\alac\dp_dec.c" />
+    <ClCompile Include="deps\alac\EndianPortable.c" />
+    <ClCompile Include="deps\alac\matrix_dec.c" />
+    <ClCompile Include="src\audio\alac_decoder.cpp" />
+    <ClCompile Include="src\audio\audio_pipeline.cpp" />
+    <ClCompile Include="src\audio\airplay_audio_format.cpp" />
+    <ClCompile Include="src\audio\payload_crypto.cpp" />
+    <ClCompile Include="src\audio\raop_audio_decryptor.cpp" />
+    <ClCompile Include="src\crypto\crypto.cpp" />
+    <ClCompile Include="src\crypto\fairplay.cpp" />
+    <ClCompile Include="src\crypto\fairplay_v3.cpp" />
+    <ClCompile Include="src\discovery\dnssd_advertiser.cpp" />
+    <ClCompile Include="src\net\dacp_client.cpp" />
+    <ClCompile Include="src\net\tcp_server.cpp" />
+    <ClCompile Include="src\plist\plist.cpp" />
+    <ClCompile Include="src\raop\raop_control.cpp" />
+    <ClCompile Include="src\rtp\rtp_receiver.cpp" />
+    <ClCompile Include="src\rtsp\rtsp_message.cpp" />
+    <ClCompile Include="src\session\session.cpp" />
+    <ClCompile Include="src\utils\string_utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deps\alac\aglib.h" />
+    <ClInclude Include="deps\alac\ALACAudioTypes.h" />
+    <ClInclude Include="deps\alac\ALACBitUtilities.h" />
+    <ClInclude Include="deps\alac\ALACDecoder.h" />
+    <ClInclude Include="deps\alac\dplib.h" />
+    <ClInclude Include="deps\alac\EndianPortable.h" />
+    <ClInclude Include="deps\alac\matrixlib.h" />
+    <ClInclude Include="include\airplayc\airplayc.h" />
+    <ClInclude Include="src\audio\alac_decoder.h" />
+    <ClInclude Include="src\audio\audio_pipeline.h" />
+    <ClInclude Include="src\audio\airplay_audio_format.h" />
+    <ClInclude Include="src\audio\payload_crypto.h" />
+    <ClInclude Include="src\audio\raop_audio_decryptor.h" />
+    <ClInclude Include="src\crypto\crypto.h" />
+    <ClInclude Include="src\crypto\fairplay.h" />
+    <ClInclude Include="src\crypto\fairplay_v3.h" />
+    <ClInclude Include="src\crypto\fairplay_tables.h" />
+    <ClInclude Include="src\crypto\fairplay_garble.inc" />
+    <ClInclude Include="src\discovery\dnssd_advertiser.h" />
+    <ClInclude Include="src\net\dacp_client.h" />
+    <ClInclude Include="src\net\tcp_server.h" />
+    <ClInclude Include="src\plist\plist.h" />
+    <ClInclude Include="src\raop\raop_control.h" />
+    <ClInclude Include="src\rtp\rtp_receiver.h" />
+    <ClInclude Include="src\rtsp\rtsp_message.h" />
+    <ClInclude Include="src\session\session.h" />
+    <ClInclude Include="src\utils\string_utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
