@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Public API"><UniqueIdentifier>{6A30B267-E21E-4D1D-B3DC-3D841E8AD716}</UniqueIdentifier></Filter>
+    <Filter Include="Audio"><UniqueIdentifier>{8A5E9F29-6DEB-4C11-9937-00251919B86A}</UniqueIdentifier></Filter>
+    <Filter Include="Cryptography"><UniqueIdentifier>{24F4C55D-1342-4553-9D2F-8835D556557B}</UniqueIdentifier></Filter>
+    <Filter Include="Discovery"><UniqueIdentifier>{7F66AF8E-B152-4A09-8697-2B472053CB5D}</UniqueIdentifier></Filter>
+    <Filter Include="Networking"><UniqueIdentifier>{7B1719A9-149E-472B-A10F-2F1166BD00EA}</UniqueIdentifier></Filter>
+    <Filter Include="Property Lists"><UniqueIdentifier>{D8342571-E580-494F-A3F8-5344919EFD9A}</UniqueIdentifier></Filter>
+    <Filter Include="RAOP Control"><UniqueIdentifier>{7D5F3DA1-73D3-4707-A7A7-4259298E698B}</UniqueIdentifier></Filter>
+    <Filter Include="RTP"><UniqueIdentifier>{CB95E81D-068F-418A-A7AF-F3DC5414F498}</UniqueIdentifier></Filter>
+    <Filter Include="RTSP"><UniqueIdentifier>{B59E3965-F87C-472A-89F0-46634686655B}</UniqueIdentifier></Filter>
+    <Filter Include="Session"><UniqueIdentifier>{B1A1B029-3F51-4CB3-B8AA-99FDECCAC78D}</UniqueIdentifier></Filter>
+    <Filter Include="Utilities"><UniqueIdentifier>{F28D6E79-31CD-41AF-B5EC-C7CEFF0BDE2A}</UniqueIdentifier></Filter>
+    <Filter Include="Dependencies"><UniqueIdentifier>{7C640588-750F-4A67-BB72-A7670F8FF3E0}</UniqueIdentifier></Filter>
+    <Filter Include="Dependencies\ALAC"><UniqueIdentifier>{433D89ED-F79E-4856-B8E9-C20151A96257}</UniqueIdentifier></Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\audio\airplay_audio_format.cpp"><Filter>Audio</Filter></ClCompile>
+    <ClCompile Include="src\audio\alac_decoder.cpp"><Filter>Audio</Filter></ClCompile>
+    <ClCompile Include="src\audio\audio_pipeline.cpp"><Filter>Audio</Filter></ClCompile>
+    <ClCompile Include="src\audio\payload_crypto.cpp"><Filter>Audio</Filter></ClCompile>
+    <ClCompile Include="src\audio\raop_audio_decryptor.cpp"><Filter>Audio</Filter></ClCompile>
+    <ClCompile Include="src\crypto\crypto.cpp"><Filter>Cryptography</Filter></ClCompile>
+    <ClCompile Include="src\crypto\fairplay.cpp"><Filter>Cryptography</Filter></ClCompile>
+    <ClCompile Include="src\crypto\fairplay_v3.cpp"><Filter>Cryptography</Filter></ClCompile>
+    <ClCompile Include="src\discovery\dnssd_advertiser.cpp"><Filter>Discovery</Filter></ClCompile>
+    <ClCompile Include="src\net\dacp_client.cpp"><Filter>Networking</Filter></ClCompile>
+    <ClCompile Include="src\net\tcp_server.cpp"><Filter>Networking</Filter></ClCompile>
+    <ClCompile Include="src\plist\plist.cpp"><Filter>Property Lists</Filter></ClCompile>
+    <ClCompile Include="src\raop\raop_control.cpp"><Filter>RAOP Control</Filter></ClCompile>
+    <ClCompile Include="src\rtp\rtp_receiver.cpp"><Filter>RTP</Filter></ClCompile>
+    <ClCompile Include="src\rtsp\rtsp_message.cpp"><Filter>RTSP</Filter></ClCompile>
+    <ClCompile Include="src\session\session.cpp"><Filter>Session</Filter></ClCompile>
+    <ClCompile Include="src\utils\string_utils.cpp"><Filter>Utilities</Filter></ClCompile>
+    <ClCompile Include="deps\alac\ag_dec.c"><Filter>Dependencies\ALAC</Filter></ClCompile>
+    <ClCompile Include="deps\alac\ALACBitUtilities.c"><Filter>Dependencies\ALAC</Filter></ClCompile>
+    <ClCompile Include="deps\alac\ALACDecoder.cpp"><Filter>Dependencies\ALAC</Filter></ClCompile>
+    <ClCompile Include="deps\alac\dp_dec.c"><Filter>Dependencies\ALAC</Filter></ClCompile>
+    <ClCompile Include="deps\alac\EndianPortable.c"><Filter>Dependencies\ALAC</Filter></ClCompile>
+    <ClCompile Include="deps\alac\matrix_dec.c"><Filter>Dependencies\ALAC</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\airplayc\airplayc.h"><Filter>Public API</Filter></ClInclude>
+    <ClInclude Include="src\audio\airplay_audio_format.h"><Filter>Audio</Filter></ClInclude>
+    <ClInclude Include="src\audio\alac_decoder.h"><Filter>Audio</Filter></ClInclude>
+    <ClInclude Include="src\audio\audio_pipeline.h"><Filter>Audio</Filter></ClInclude>
+    <ClInclude Include="src\audio\payload_crypto.h"><Filter>Audio</Filter></ClInclude>
+    <ClInclude Include="src\audio\raop_audio_decryptor.h"><Filter>Audio</Filter></ClInclude>
+    <ClInclude Include="src\crypto\crypto.h"><Filter>Cryptography</Filter></ClInclude>
+    <ClInclude Include="src\crypto\fairplay.h"><Filter>Cryptography</Filter></ClInclude>
+    <ClInclude Include="src\crypto\fairplay_v3.h"><Filter>Cryptography</Filter></ClInclude>
+    <ClInclude Include="src\crypto\fairplay_tables.h"><Filter>Cryptography</Filter></ClInclude>
+    <ClInclude Include="src\crypto\fairplay_garble.inc"><Filter>Cryptography</Filter></ClInclude>
+    <ClInclude Include="src\discovery\dnssd_advertiser.h"><Filter>Discovery</Filter></ClInclude>
+    <ClInclude Include="src\net\dacp_client.h"><Filter>Networking</Filter></ClInclude>
+    <ClInclude Include="src\net\tcp_server.h"><Filter>Networking</Filter></ClInclude>
+    <ClInclude Include="src\plist\plist.h"><Filter>Property Lists</Filter></ClInclude>
+    <ClInclude Include="src\raop\raop_control.h"><Filter>RAOP Control</Filter></ClInclude>
+    <ClInclude Include="src\rtp\rtp_receiver.h"><Filter>RTP</Filter></ClInclude>
+    <ClInclude Include="src\rtsp\rtsp_message.h"><Filter>RTSP</Filter></ClInclude>
+    <ClInclude Include="src\session\session.h"><Filter>Session</Filter></ClInclude>
+    <ClInclude Include="src\utils\string_utils.h"><Filter>Utilities</Filter></ClInclude>
+    <ClInclude Include="deps\alac\aglib.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+    <ClInclude Include="deps\alac\ALACAudioTypes.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+    <ClInclude Include="deps\alac\ALACBitUtilities.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+    <ClInclude Include="deps\alac\ALACDecoder.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+    <ClInclude Include="deps\alac\dplib.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+    <ClInclude Include="deps\alac\EndianPortable.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+    <ClInclude Include="deps\alac\matrixlib.h"><Filter>Dependencies\ALAC</Filter></ClInclude>
+  </ItemGroup>
+</Project>
